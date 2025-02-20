@@ -8,7 +8,7 @@ class EventsLinksCreator:
         self.__events_link_repo = events_link_repo
 
     def create(self, http_request: HttpRequest) -> HttpResponse:
-        event_link_info = HttpRequest.body["data"]
+        event_link_info = http_request.body["data"]
         event_id = event_link_info["event_id"]
         subscriber_id = event_link_info["subscriber_id"]
 
